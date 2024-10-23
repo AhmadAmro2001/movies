@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="CSS/myCss.css">
+</head>
+<body class="bg-black">
+    <!-- loader -->
+    <div class="inner-loading-screen top-0 start-0 end-0 bottom-0 justify-content-center align-items-center" style="display: none;">
+        <i class="fa fa-spinner fa-spin fa-5x"></i>
+    </div>
+    <!-- ----------- -->
+    <!-- side bar -->
+    <div class="sideBar vh-100 d-flex position-fixed">
+
+        <div class="closeBar  bg-black  d-flex  flex-column justify-content-between vh-100">
+            <ul class="list-unstyled px-4 overflow-hidden">
+                <li class="mt-3" id="nowPlaying"><a  href="#">Now playing</li>
+                <li class="mt-3" id="popular"><a href="#">Popular</a></li>
+                <li class="mt-3" id="topRated"><a href="#">Top Rated</a></li>
+                <li class="mt-3" id="trending"><a href="#">Trending</a></li>
+                <li class="mt-3" id="upComing"><a href="#">Upcoming</a></li>
+                <li class="mt-3" id=""><a href="#contact">Contact Us</a></li>
+            </ul>
+            <div class="closeBar-footer text-white px-4 ">
+                <div class="footer-icons mb-3 ">
+                    <i class="fa-brands fa-facebook  px-2"></i>
+                    <i class="fa-brands fa-twitter px-2"></i>
+                    <i class="fa-solid fa-globe px-2 "></i>
+                </div>
+                <p>Copyright Â© 2019 All Rights Reserved.</p>
+                <p>Created by <span>Housam Ramadan</span></p>
+            </div>
+        </div>
+        <div class="openBar bg-white d-flex flex-column justify-content-between vh-100 text-center ">
+            <img src="pics/logo.png" alt="">
+            <i class="fa-solid fa-bars open"></i>
+            <div class="iconBox d-flex flex-column pb-5">
+                <i class="fa-solid fa-globe my-2"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------- -->
+    <!-- search input  -->
+    <section id="searchInput">
+
+        <div class="container py-5 d-flex justify-content-center">
+            <div class="input-group mb-3 w-50 ">
+                <input type="text" onkeyup="getSearchData(this.value)" class="form-control bg-black text-white rounded-5" placeholder="Search" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+        </div>
+
+    </section>
+    <!-- ------------------------------------------------- -->
+    <!-- moviesss -->
+    <section id="moviesBox">
+        <div class="container">
+            <div class="row g-5" id="moviesCards">
+                
+            </div>
+        </div>
+
+    </section>
+    <!-- -------------------------------------------------------------------------- -->
+    <!-- contact us -->
+
+    <section id="contact" class="container py-5 text-white">
+        <h2>Contact Us</h2>
+
+        <div class="row g-3 mt-3">
+            <div class="col-md-6 m-auto">
+                <input type="text" id="fname" onkeyup="testValidation()" class="form-control bg-black form-contact rounded-0 text-white" placeholder="enter your name" aria-label="Username" aria-describedby="basic-addon1">
+                <span id="fnameAlert" class=" text-danger wrongMsg w-100 d-none">enter a correct name</span>
+            </div>
+            <div class="col-md-6 m-auto">
+                <input type="email" id="email" onkeyup="testValidation()" class="form-control bg-black form-contact rounded-0 text-white" placeholder="enter your email" aria-label="Username" aria-describedby="basic-addon1">
+                <span id="emailAlert" class=" text-danger wrongMsg w-100 d-none">enter a correct email</span>
+            </div>
+            <div class="col-md-6 m-auto">
+                <input type="number" id="phone" onkeyup="testValidation()" class="form-control bg-black form-contact rounded-0 text-white" placeholder="enter your phone" aria-label="Username" aria-describedby="basic-addon1">
+                <span id="phoneAlert" class=" text-danger wrongMsg w-100 d-none">enter a correct phone</span>
+            </div>
+            <div class="col-md-6 m-auto">
+                <input type="number" id="age" onkeyup="testValidation()" class="form-control bg-black form-contact rounded-0 text-white" placeholder="enter your age" aria-label="Username" aria-describedby="basic-addon1">
+                <span id="ageAlert" class=" text-danger wrongMsg w-100 d-none">enter a correct age</span>
+            </div>
+            <div class="col-md-6 m-auto">
+                <input type="password" id="pass" onkeyup="testValidation()" class="form-control bg-black form-contact rounded-0 text-white" placeholder="enter your password" aria-label="Username" aria-describedby="basic-addon1">
+                <span id="passAlert" class=" text-danger wrongMsg w-100 d-none">enter a correct password</span>
+            </div>
+            <div class="col-md-6 m-auto">
+                <input type="password" id="repass" onkeyup="testValidation()" class="form-control bg-black form-contact rounded-0 text-white" placeholder="re-enter your password" aria-label="Username" aria-describedby="basic-addon1">
+                <span id="repassAlert" class=" text-danger wrongMsg w-100 d-none">enter the same password</span>
+            </div>
+        </div>
+        <button type="button" onclick="testValidation()" id="submitBtn" class="btn btn-outline-dark text-white mt-4 px-4 py-2">Submit</button>
+
+    </section>
+
+<!-- ------------------------------------------------------------------------------- -->
+
+
+
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/jquery-3.7.1.min.js"></script>
+    <script src="JS/myJs.js"></script>
+
+</body>
+</html>
